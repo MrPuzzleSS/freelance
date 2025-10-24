@@ -7,7 +7,13 @@
 
 html {
     font-size: 62.5%;
+    box-sizing: border-box;
 }
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
 body {
     font-size: 16px; /* 1rem = 10px */
     font-family: 'Special Gothic', sans-serif;
@@ -56,4 +62,12 @@ body {
 .navegacion-principal a:hover {
     background-color: var(--secundario);
     color: var(--negro);
+}
+
+.hero {
+    background-image: url(/img/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 450px;
+    padding: 20px;
 }
