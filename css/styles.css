@@ -1,48 +1,44 @@
+/* Pseudo-selector esta propiedad no existe en html pero se puede usar
+las propiedades dentro de este */
 :root {
-    --blanco: #ffffff;
-    --negro: #000000;
-    --primario: #006ace;
-    --secundario: #6c757d;
+    --blanco: #FFFFFF;
+    --oscuro: #212121;
+    --primario: #FFC107;
+    --secundario: #0097A7;
+    --gris: #757575;
 }
 
+/* Truco CSS para ajustar medidas rem */
 html {
     font-size: 62.5%;
-    box-sizing: border-box;
 }
-
-*, *:before, *:after {
-    box-sizing: inherit;
-}
-
 body {
-    font-size: 16px; /* 1rem = 10px */
-    font-family: 'Special Gothic', sans-serif;
+    font-size: 16px;
+    font-family: "Ubuntu", sans-serif;
 }
+
+/* 1 rem es igual a 10px */
 .titulo {
     text-align: center;
     font-size: 3.8rem;
+    color: var(--oscuro)
 }
-
 .titulo span {
     font-size: 2rem;
 }
-
 .contenedor {
     max-width: 120rem;
     margin: 0 auto;
 }
-
 .nav-bg {
-    background-color:var(--primario);
-
+    background-color: var(--secundario)
 }
-
 .navegacion-principal {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
-
-@media (min-width: 768px) {
+@media (min-width: 480px) {
     .navegacion-principal {
         flex-direction: row;
         justify-content: space-between;
@@ -50,8 +46,6 @@ body {
 }
 
 .navegacion-principal a {
-    display: block;
-    text-align: center;
     color: var(--blanco);
     text-decoration: none;
     font-size: 2rem;
@@ -60,14 +54,7 @@ body {
 }
 
 .navegacion-principal a:hover {
-    background-color: var(--secundario);
-    color: var(--negro);
+    background-color: var(--primario);
+    color: var(--oscuro);
 }
 
-.hero {
-    background-image: url(/img/hero.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 450px;
-    padding: 20px;
-}
