@@ -20,19 +20,44 @@ body {
     font-size: 16px;
     font-family: "Ubuntu", sans-serif;
 }
+h1 {
+    font-size: 3.8rem;
+}
+h2 {
+    font-size: 2.8rem;
+}
+h3 {
+    font-size: 1.8rem;
+}
+h1, h2, h3 {
+    text-align: center;
+}
 
 /* 1 rem es igual a 10px */
-.titulo {
-    text-align: center;
-    font-size: 3.8rem;
-    color: var(--oscuro)
-}
 .titulo span {
     font-size: 2rem;
 }
 .contenedor {
     max-width: 120rem;
     margin: 0 auto;
+}
+.boton {
+    background-color: var(--secundario);
+    color : var(--blanco);
+    padding: 1rem 3rem;
+    margin-top: 1rem;
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: .5rem;
+    width: 80%;
+    text-align: center;
+}
+@media (min-width: 480px) {
+    .boton{
+        width: auto;
+    }
 }
 .nav-bg {
     background-color: var(--secundario)
@@ -67,6 +92,24 @@ body {
     background-image: url(../img/hero.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 410px;
-    padding: 20px;
+    height: 450px;
+    position: relative; /* El padre debe tener position relative */
+}
+.contenido-hero {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.603);
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.contenido-hero h2, .contenido-hero p {
+    color: var(--blanco);
+}
+.ubicacion {
+    display: flex;
+    align-items: flex-end;
 }
