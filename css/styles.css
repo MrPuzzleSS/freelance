@@ -6,6 +6,7 @@ las propiedades dentro de este */
     --primario: #FFC107;
     --secundario: #0097A7;
     --gris: #757575;
+    --gris-claro: #DFE9F3;
 }
 
 /* Truco CSS para ajustar medidas rem */
@@ -19,6 +20,7 @@ html {
 body {
     font-size: 16px;
     font-family: "Ubuntu", sans-serif;
+    background-image: linear-gradient(to top, var(--gris-claro) 0%, var(--blanco) 100%);
 }
 h1 {
     font-size: 3.8rem;
@@ -40,6 +42,13 @@ h1, h2, h3 {
 .contenedor {
     max-width: 120rem;
     margin: 0 auto;
+}
+.sombra {
+    -webkit-box-shadow: 0px 9px 25px -6px rgba(0,0,0,0.76); 
+    box-shadow: 0px 9px 25px -6px rgba(0,0,0,0.76);
+    background-color: var(--blanco);
+    padding: 2rem;
+    border-radius: 1rem;
 }
 .boton {
     background-color: var(--secundario);
@@ -94,6 +103,7 @@ h1, h2, h3 {
     background-size: cover;
     height: 450px;
     position: relative; /* El padre debe tener position relative */
+    margin-bottom: 2rem;
 }
 .contenido-hero {
     position: absolute;
@@ -109,7 +119,16 @@ h1, h2, h3 {
 .contenido-hero h2, .contenido-hero p {
     color: var(--blanco);
 }
-.ubicacion {
+.contenido-hero .ubicacion {
     display: flex;
     align-items: flex-end;
+}
+
+/* Servicios */
+@media (min-width: 768px) {
+    .servicios {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 1rem;
+    }
 }
