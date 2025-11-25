@@ -108,36 +108,37 @@
                 </p>
             </section>
         </div>
-    </main>
-    <section>
+        <section>
         <h2>Contacto</h2>
-        <form>
+        <form class="formulario">
             <fieldset>
                 <legend>Contactános llenando todos los campos</legend>
-                <div>
-                    <label for="nombre">Nombre</label>
-                    <input type="text" name="nombre" id="nombre" placeholder="Tu Nombre">
-                </div>
-                <div>
-                    <label for="telefono">Teléfono</label>
-                    <input type="tel" name="telefono" id="telefono" placeholder="Tu teléfono">
-                </div>
+                <div class="contenedor-campos">
+                    <div class="campo">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" name="nombre" id="nombre" placeholder="Tu Nombre" class="input-text">
+                    </div>
+                    <div class="campo">
+                        <label for="telefono">Teléfono</label>
+                        <input type="tel" name="telefono" id="telefono" placeholder="Tu teléfono" class="input-text">
+                    </div class="campo">
 
-                <div>
-                    <label for="correo">Correo</label>
-                    <input type="email" name="correo" id="correo" placeholder="Tu correo">
+                    <div class="campo">
+                        <label for="correo">Correo</label>
+                        <input type="email" name="correo" id="correo" placeholder="Tu correo" class="input-text">
+                    </div>
+                    <div class="campo">
+                        <label for="mensaje">Mensaje</label>
+                        <textarea name="mensaje" id="mensaje" class="input-text"></textarea>
+                    </div>
                 </div>
-                <div>
-                    <label for="mensaje">Mensaje</label>
-                    <textarea name="mensaje" id="mensaje"></textarea>
-                </div>
-                <div>
-                    <input type="submit" value="Enviar">
-
+                <div class="alinear-derecha flex">
+                    <input type="submit" value="Enviar" class="boton w-sm-100">
                 </div>
             </fieldset>
         </form>
     </section>
+    </main>
     <footer>
         <p>Todos los derechos reservados. Simón Ruiz Garcia</p>
     </footer>
